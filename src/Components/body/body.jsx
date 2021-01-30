@@ -1,22 +1,35 @@
 import React, { Component } from 'react';
+import SideBar from '../side-bar/side-bar';
 import SignUp from '../sign-up/sign-up';
 import './body.css';
 
 class Body extends Component {
   constructor() {
     super();
-    this.state = { hidden: true };
+    this.state = {
+      signUpHidden: true,
+      toggleHidden: true,
+    };
   }
 
   render() {
-    const { hidden } = this.state;
+    const { signUpHidden, toggleHidden } = this.state;
     return (
       <div className="container">
+        <button
+          className="toggle"
+          onClick={(event) => {
+            event.preventDefault();
+            this.setState({ toggleHidden: !toggleHidden });
+          }}
+        >
+          <i className="fa fa-bars fa-2x"></i>
+        </button>
         <button
           className="signUpBtn"
           onClick={(event) => {
             event.preventDefault();
-            this.setState({ hidden: !hidden });
+            this.setState({ signUpHidden: !signUpHidden });
           }}
         >
           Sign Up
@@ -61,7 +74,8 @@ class Body extends Component {
           adipisci commodi minima fugit possimus ipsa sunt accusamus esse soluta
           nulla assumenda quos exercitationem dolorum?
         </p>
-        {hidden ? null : <SignUp />}
+        {signUpHidden ? null : <SignUp />}
+        {toggleHidden ? null : <SideBar />}
       </div>
     );
   }

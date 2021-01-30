@@ -4,14 +4,14 @@ import './sign-up.css';
 class SignUp extends Component {
   constructor() {
     super();
-    this.state = { hidden: false };
+    this.state = { signUpHidden: false };
   }
 
   render() {
-    const { hidden } = this.state;
+    const { signUpHidden } = this.state;
     return (
       <div>
-        {hidden ? null : (
+        {signUpHidden ? null : (
           <div className="modal-container" id="modal">
             <div className="modal">
               <button
@@ -19,10 +19,10 @@ class SignUp extends Component {
                 id="close"
                 onClick={(event) => {
                   event.preventDefault();
-                  this.setState({ hidden: true });
+                  this.setState({ signUpHidden: true });
                 }}
               >
-                <i className="fa fa-times">Suppp</i>
+                <i className="fa fa-times"></i>
               </button>
               <div className="modal-header">
                 <h3>Sign Up</h3>
@@ -78,7 +78,3 @@ class SignUp extends Component {
 }
 
 export default SignUp;
-
-// {
-//   hidden ? null : <Modal />;
-// }

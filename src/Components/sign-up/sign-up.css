@@ -55,11 +55,15 @@
 }
 
 .close-btn {
-  background: transparent;
+  background-color: rgb(114, 4, 4);
   font-size: 25px;
   position: absolute;
   top: 0;
   right: 0;
+  color: white;
+  border: 20px white;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 @keyframes modalopen {
