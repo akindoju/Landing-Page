@@ -1,5 +1,5 @@
 .modal-container {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.568);
   position: fixed;
   top: 0;
   left: 0;
@@ -9,6 +9,9 @@
 
 .modal {
   background-color: white;
+  color: rgb(114, 4, 4);
+  text-align: left;
+  font-size: 15px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: absolute;
@@ -19,18 +22,14 @@
   max-width: 100%;
   width: 400px;
   animation-name: modalopen;
-  animation-duration: 1s;
+  animation-duration: 0.7s;
 }
 
 .modal-header {
   background: rgb(114, 4, 4);
-  padding: 15px;
+  padding: 5px 20px;
   color: rgb(255, 255, 255);
-}
-
-.modal-header h3 {
-  margin: 0;
-  border-bottom: 1px solid #333;
+  font-size: 18px;
 }
 
 .modal-content {
@@ -48,22 +47,23 @@
 
 .modal-form .form-input {
   padding: 8px;
-  width: 100%;
+  width: 90%;
   border-radius: 3px;
   outline: none;
   border: 1px solid rgb(114, 4, 4);
 }
 
 .close-btn {
-  background-color: rgb(114, 4, 4);
+  background-color: #720404;
   font-size: 25px;
+  border: none;
+  outline: none;
   position: absolute;
   top: 0;
   right: 0;
   color: white;
-  border: 20px white;
   cursor: pointer;
-  font-size: 20px;
+  padding: 20px;
 }
 
 @keyframes modalopen {

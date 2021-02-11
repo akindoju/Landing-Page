@@ -28,7 +28,6 @@ class SignUp extends Component {
                 <h3>Sign Up</h3>
               </div>
               <div className="modal-content">
-                <p>Register with us to get offers, support and more</p>
                 <form action="" className="modal-form">
                   <div>
                     <label htmlFor="name">Name</label>
@@ -66,7 +65,15 @@ class SignUp extends Component {
                       className="form-input"
                     />
                   </div>
-                  <input type="submit" value="submit" className="submit-btn" />
+                  <button
+                    className="submit"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      alert('Submited');
+                    }}
+                  >
+                    Submit
+                  </button>
                 </form>
               </div>
             </div>

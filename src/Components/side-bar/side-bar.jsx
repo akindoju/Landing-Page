@@ -13,16 +13,16 @@ const SideBar = () => {
         </div>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <p href="#">Home</p>
           </li>
           <li>
-            <a href="#">Portfolio</a>
+            <p href="#">Portfolio</p>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <p href="#">Blog</p>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <p href="#">Contact</p>
           </li>
         </ul>
       </nav>

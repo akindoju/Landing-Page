@@ -6,11 +6,14 @@ import './header.css';
 class Header extends Component {
   constructor() {
     super();
-    this.state = { toggleHidden: true, signUpHidden: true };
+    this.state = {
+      toggleHidden: true,
+      signUpHidden: true,
+    };
   }
 
   render() {
-    const { toggleHidden, signUpHidden } = this.state;
+    const { toggleHidden, signUpHidden, toggleShow } = this.state;
     return (
       <div className="header">
         <h1>Simple React Landing Page</h1>
@@ -19,7 +22,9 @@ class Header extends Component {
           className="toggle"
           onClick={(event) => {
             event.preventDefault();
-            this.setState({ toggleHidden: !toggleHidden });
+            this.setState({
+              toggleHidden: !toggleHidden,
+            });
           }}
         >
           <i className="fa fa-bars fa-2x"></i>
@@ -28,12 +33,14 @@ class Header extends Component {
           className="signUpBtn"
           onClick={(event) => {
             event.preventDefault();
-            this.setState({ signUpHidden: !signUpHidden });
+            this.setState({
+              signUpHidden: !signUpHidden,
+            }, console.log('Clicked'));
           }}
         >
           Sign Up
         </button>
-        {signUpHidden ? null : <SignUp />}
+        {signUpHidden  ? null : <SignUp />}
         {toggleHidden ? null : <SideBar />}
       </div>
     );
