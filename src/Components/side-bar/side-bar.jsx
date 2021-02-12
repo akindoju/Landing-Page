@@ -1,9 +1,10 @@
 import React from 'react';
 import './side-bar.css';
 
-const SideBar = () => {
+const SideBar = (props) => {
+  const { isHidden } = props;
   return (
-    <div className="nav">
+    <div className={isHidden ? 'nav closeSideBar' : 'nav navIn'}>
       <nav>
         <div>
           <img
