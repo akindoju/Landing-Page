@@ -7,22 +7,22 @@ const SideBar = () => {
       <nav>
         <div>
           <img
-            src="https://randomuser.me/api/portraits/men/12.jpg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy1NgKC6dzRP3Pfw7g9K1ow7Z1ZIWwUzSrSQ&usqp=CAU"
             alt="user"
           />
         </div>
         <ul>
           <li>
-            <p href="#">Home</p>
+            <p>Home</p>
           </li>
           <li>
-            <p href="#">Portfolio</p>
+            <p>Portfolio</p>
           </li>
           <li>
-            <p href="#">Blog</p>
+            <p>Blog</p>
           </li>
           <li>
-            <p href="#">Contact</p>
+            <p>Contact</p>
           </li>
         </ul>
       </nav>

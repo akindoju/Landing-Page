@@ -13,7 +13,7 @@ class Header extends Component {
   }
 
   render() {
-    const { toggleHidden, signUpHidden, toggleShow } = this.state;
+    const { toggleHidden, signUpHidden } = this.state;
     return (
       <div className="header">
         <h1>Simple React Landing Page</h1>
@@ -33,14 +33,17 @@ class Header extends Component {
           className="signUpBtn"
           onClick={(event) => {
             event.preventDefault();
-            this.setState({
-              signUpHidden: !signUpHidden,
-            }, console.log('Clicked'));
+            this.setState(
+              {
+                signUpHidden: !signUpHidden,
+              },
+              console.log('Clicked')
+            );
           }}
         >
           Sign Up
         </button>
-        {signUpHidden  ? null : <SignUp />}
+        {signUpHidden ? null : <SignUp />}
         {toggleHidden ? null : <SideBar />}
       </div>
     );

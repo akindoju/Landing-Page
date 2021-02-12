@@ -70,6 +70,7 @@ class SignUp extends Component {
                     onClick={(event) => {
                       event.preventDefault();
                       alert('Submited');
+                      this.setState({ signUpHidden: true });
                     }}
                   >
                     Submit
