@@ -12,6 +12,14 @@ class Header extends Component {
     };
   }
 
+  signUpHiddenHandler = (event) => {
+    const { signUpHidden } = this.state;
+    event.preventDefault();
+    this.setState({
+      signUpHidden: !signUpHidden,
+    });
+  };
+
   render() {
     const { toggleHidden, signUpHidden } = this.state;
     return (
@@ -29,21 +37,10 @@ class Header extends Component {
         >
           <i className="fa fa-bars fa-2x"></i>
         </button>
-        <button
-          className="signUpBtn"
-          onClick={(event) => {
-            event.preventDefault();
-            this.setState(
-              {
-                signUpHidden: !signUpHidden,
-              },
-              console.log('Clicked')
-            );
-          }}
-        >
+        <button className="signUpBtn" onClick={this.signUpHiddenHandler}>
           Sign Up
         </button>
-        {signUpHidden ? null : <SignUp />}
+        {signUpHidden ? null : <SignUp onHide={this.signUpHiddenHandler} />}
         {toggleHidden ? null : <SideBar />}
       </div>
     );

@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import './sign-up.css';
 
 class SignUp extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = { signUpHidden: false };
   }
 
   render() {
     const { signUpHidden } = this.state;
+    const { onHide } = this.props;
     return (
       <div>
         {signUpHidden ? null : (
@@ -20,6 +21,7 @@ class SignUp extends Component {
                 onClick={(event) => {
                   event.preventDefault();
                   this.setState({ signUpHidden: true });
+                  onHide(event);
                 }}
               >
                 <i className="fa fa-times"></i>
